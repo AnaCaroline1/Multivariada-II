@@ -1,0 +1,232 @@
+# Exemplo: Crânios egípcios
+
+## Sobre o exemplo escolhido:
+
+O conjunto de dados "Egyptian skulls" contém informações sobre crânios egípcios masculinos (em mm) da área de Tebas, no Egito. Há cinco amostras de 30 crânios cada uma do período pré-dinástico primitivo (cerca de 4000 a.C.), do período pré-dinástico antigo (cerca de 3300 a.C.), das 12ª e 13ª dinastias (cerca de 1850 a.C.), do período Ptolemaico (cerca de 200 a.C.) e do período Romano (cerca de 150 d.C.). Quatro medidas são apresentadas para cada crânio.
+
+Questões abordadas no livro, são:
+
+1. Como estão relacionadas as quatro medidas? 
+
+2. Existem diferenças estatisticamente significantes nas médias amostrais das variáveis, e, se existem, essas diferenças refletem mudanças graduais ao longo do tempo na forma e no tamanho dos crânios?
+
+3. Existem diferenças significantes nos desvios padrão amostrais para as variáveis, e, se existem, essas diferenças refletem mudanças graduais ao longo do tempo na quantidade de variação?
+
+4. É possível construir uma função das quatro variáveis que, em algum sentido, descreva as mudanças ao longo do tempo?
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(janitor)
+library(aplpack) # Plotagem de faces
+library(car) # Para a função "pairs"
+library(ggplot2)
+library(plotly)
+library(GGally)
+
+#install.packages("moments")
+library(moments)
+
+egyptian <- read_csv("Egyptian skulls.csv")
+
+egyptian <- egyptian |>
+  clean_names()
+
+egyptian$period <- factor(egyptian$period, 
+                          levels = c("Early predynastic", "Late predynastic", "12th and 13th Dynasty", "Ptolemaic period", "Roman period"))
+
+head(egyptian)
+
+table(egyptian$period)
+
+glimpse(egyptian)
+
+summary(egyptian)
+```
+
+```{r echo=FALSE}
+box_mb <- ggplot(egyptian, aes(x = period, y = maximum_breadth)) +
+  geom_boxplot() +
+  labs(title = "Boxplot da Largura Máxima por Período",
+       x = "Período",
+       y = "Largura Máxima (mm)") +
+  theme_minimal()
+
+ggplotly(box_mb)
+
+box_bh <- ggplot(egyptian, aes(x = period, y = basibregmatic_height )) +
+  geom_boxplot() +
+  labs(title = "Boxplot da Altura Basibregmática por Período",
+       x = "Período",
+       y = "Altura Basibregmática (mm)") +
+  theme_minimal()
+
+ggplotly(box_bh)
+
+box_bl <- ggplot(egyptian, aes(x = period, y = basialveolar_length )) +
+  geom_boxplot() +
+  labs(title = "Boxplot da Comprimento Basialveolar por Período",
+       x = "Período",
+       y = "Comprimento Basialveolar (mm)") +
+  theme_minimal()
+
+ggplotly(box_bl)
+
+box_nh <- ggplot(egyptian, aes(x = period, y = nasal_height )) +
+  geom_boxplot() +
+  labs(title = "Boxplot da Altura Nasal por Período",
+       x = "Período",
+       y = "Altura Nasal (mm)") +
+  theme_minimal()
+
+ggplotly(box_nh)
+
+```
+
+1. Qual o valor típico de cada período?
+
+Observando a Largura Máxima de um crânio egípsio (em mm), a mediana no período romano é superior ao período pré-dinástico Primitivo, sugerindo um aumento ao longo do tempo. Na Altura Basibregmática, se pode notar que a mediana possue sentido contrário, com o passar dos períodos, diminui para 130 mm, onde se percebe ainda que na altura mediana no período romano é a altura mínima no périodo anterior (período ptolomaico). Comportamento parecido sendo observado no Comprimento Basialveolar, onde a mediana no período romano diminuiu significativamente em relação ao período anterior. Na Altura Nasal, a mediana no período romano é a mais alta, indicando um aumento ao longo do tempo.
+
+2. Quão espalhadas as variáveis estão dos dados?
+
+Largura Máxima
+
+Em relação a disperção ou variabilidade se pode notar que, no período 12º e 13º dinástias tem caixa e haste mais compactas em comparação ao período pré-dinástico primitivo, sugerindo maior variabilidade nos valores menores.
+
+Altura Basibregmática
+
+Por sua vez, no período ptolemaico a caixa e hastes são mais compactar em comparação aos períodos anteriores que apresentam hastes superiores, indicando maior variabilidade nos maiores valores, enquanto que no período posterior, se nota o inverso, variabilidade nos valores menores.
+
+Comprimento Basialveolar
+
+No periodo 12º 13º dinástico se observar novamente pouca variabilidade em comparação ao período pré-dinástico primitivo, com alta variabilidade superior. Ocorre pouca variabilidade no período romano.
+
+Altura Nasal
+
+No período pré-dinástico antigo, a caixa e hastes são mais compactas, indicando menor variabilidade em relação a outros períodos.
+
+
+3. Existem valores atípicos?
+
+Dos quatro boxplots apresentados, três deles apresentam valores atípicos, nos períodos pré-dinástico antigo, pré-dinástico primitivo, período ptolomaico e período romano, respectivamente. 
+
+4. Os dados são simétricos?
+
+Largura Máxima
+
+Existe assimetria à direita no período pré-dinástico primitivo, antigo e ptolemaico indicando que a maioria dos crânios tem largura máxima menor, mas há alguns com valores maiores com assimetria negativa como no período 12º e 13º dinástico. Sendo o período romano o que mais se aproxima de uma distribuição simetrica.
+
+Altura Basibregmática
+
+Nos períodos 12º e 13º dinástico e ptolomaico, são os que apresentam assimetria positiva, nos períodos primitivo, antigo  a assimetria já é negativa enquanto que no período romano parece existir uma simetria.
+
+Comprimento Basialveolar
+
+Os períodos antigo, 12º e 13º dinástico e romano possuem simetria. Enquanto que os período primitivo e ptolomaico possuem assimetria negativa.
+
+
+```{r include=FALSE}
+
+#skewness(egyptian$maximum_breadth[egyptian$period == ""])
+
+```
+
+
+5. Existe diferença real entre os período comparados?
+
+
+
+
+```{r grafico_chernoff, in}
+## Gráfico de Faces
+#| eval: false
+#| include: false
+faces(egyptian[2:5], face.type = 2, scale = T, labels = egyptian$period, plot.faces = T, nrow.plot = 2, ncol.plot = 5)
+```
+
+## Gráfico de Pares
+
+```{r}
+#| echo: false
+#| menssage: false
+#| 
+scatterplotMatrix(~ maximum_breadth + basibregmatic_height+ basialveolar_length + nasal_height, 
+                    data = egyptian,
+                    smooth = list(style = "line"),
+                    regLine = TRUE,
+                    diagonal = list(method = "qqplot"))
+```
+
+## Coeficiênte de Variação
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+cv <- function(x){
+  round((sd(x, na.rm = T) / mean(x, na.rm = T)) * 100, 2)
+}
+
+cv_perfil <- egyptian %>%
+  group_by(period) %>%
+  summarise(across(c(maximum_breadth, basibregmatic_height, basialveolar_length, nasal_height), cv)) %>%
+  pivot_longer(cols = -period, names_to = "Variavel", values_to = "CV")
+
+cv_perf <- ggplot(cv_perfil, aes( x = reorder(Variavel, CV), y = CV, fill = period)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  coord_flip() +
+  labs(title = "Coeficiente de Variação por Período",
+       x = "Variáveis Craniométricas",
+       y = "Coeficiente de Variação (%)") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "PuBu") 
+ggplotly(cv_perf)
+```
+
+Como os Coeficientes de Variação por período são inferiores a 50%, sendo o máximo obtido de 7.24%, indica que a média é representativa ao conjunto de dados. Sendo menores valores nos período ptolomaico na altura nasal, seguido do período pré-dinástico primitivo. O período pré-dinástico antigo no comprimento Basialveolar, seguido do período 12º e 13º dinástico, em Altura Basibregmática o período pré-dinástico primitico seguido do pré-dinástico antigo são os com os menores coeficentes de variação e em Largura Máxima, os período Ptlomaico e 12º e 13º dinástico possuem os menores valores de variação percentual.
+
+
+## Perfis das Variáveis
+
+
+```{r}
+#| echo: false
+
+perfil_md <- egyptian%>%
+  group_by(period)%>%
+  summarise(across(c(maximum_breadth,basibregmatic_height, basialveolar_length, nasal_height), mean))%>%
+  pivot_longer(cols = -period, names_to = "Variavel", values_to = "Media")
+
+
+perf_v_period <- ggplot(perfil_md, aes(x = Variavel, y = round(Media,2), group = period, color = period)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
+  theme_minimal() +
+  labs(title = "Perfil das Variáveis por Período",
+       x = "Variáveis Craniométricas",
+       y = "Média (mm)")
+
+ggplotly(perf_v_period)
+
+```
+
+```{r}
+#| echo: false
+
+perf_v_bar <- ggplot(perfil_md, aes(x = Variavel, y = round(Media,2), fill = period)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme_minimal() +
+  labs(title = "Perfil das Variáveis por Período",
+       x = "Variáveis Craniométricas",
+       y = "Média (mm)") +
+  scale_fill_brewer(palette = "PuBu")
+
+ggplotly(perf_v_bar)
+```
+
+
+
+
+
+

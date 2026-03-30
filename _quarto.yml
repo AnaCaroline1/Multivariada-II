@@ -1,0 +1,20 @@
+project:
+  type: book
+  output-dir: docs
+book:
+  title: "Análise Exploratória Multivariada - Tarefa 1"
+  author: "Ana Caroline Alexandre Pantoja"
+  date: last-modified
+  chapters:
+    - index.qmd
+    - references.qmd
+
+format:
+  html:
+    theme:  
+      light: flatly
+      dark: darkly
+    toc-title: "Sumário"
+
+editor: visual
+
