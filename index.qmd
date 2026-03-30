@@ -137,11 +137,11 @@ Os períodos antigo, 12º e 13º dinástico e romano possuem simetria. Enquanto 
 
 
 
-```{r grafico_chernoff, in}
+```{r grafico_chernoff}
 ## Gráfico de Faces
 #| eval: false
 #| include: false
-faces(egyptian[2:5], face.type = 2, scale = T, labels = egyptian$period, plot.faces = T, nrow.plot = 2, ncol.plot = 5)
+faces(egyptian[2:5], face.type = 1, scale = T, labels = egyptian$period, plot.faces = T, nrow.plot = 2, ncol.plot = 5)
 ```
 
 ## Gráfico de Pares
@@ -149,7 +149,7 @@ faces(egyptian[2:5], face.type = 2, scale = T, labels = egyptian$period, plot.fa
 ```{r}
 #| echo: false
 #| menssage: false
-#| 
+
 scatterplotMatrix(~ maximum_breadth + basibregmatic_height+ basialveolar_length + nasal_height, 
                     data = egyptian,
                     smooth = list(style = "line"),
