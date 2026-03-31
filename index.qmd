@@ -1,3 +1,4 @@
+
 # Exemplo: Crânios egípcios
 
 ## Sobre o exemplo escolhido:
@@ -44,7 +45,17 @@ glimpse(egyptian)
 summary(egyptian)
 ```
 
-```{r echo=FALSE}
+## Visualizando os dados
+
+
+```{r}
+#| echo: false
+
+head(egyptian)
+```
+
+```{r}
+#| echo: false
 box_mb <- ggplot(egyptian, aes(x = period, y = maximum_breadth)) +
   geom_boxplot() +
   labs(title = "Boxplot da Largura Máxima por Período",
@@ -52,8 +63,13 @@ box_mb <- ggplot(egyptian, aes(x = period, y = maximum_breadth)) +
        y = "Largura Máxima (mm)") +
   theme_minimal()
 
-ggplotly(box_mb)
+ggplotly(box_mb)%>% 
+  layout(margin = list(t = 50, b = 50, l = 50, r = 50))
+```
 
+
+```{r}
+#| echo: false
 box_bh <- ggplot(egyptian, aes(x = period, y = basibregmatic_height )) +
   geom_boxplot() +
   labs(title = "Boxplot da Altura Basibregmática por Período",
@@ -61,8 +77,13 @@ box_bh <- ggplot(egyptian, aes(x = period, y = basibregmatic_height )) +
        y = "Altura Basibregmática (mm)") +
   theme_minimal()
 
-ggplotly(box_bh)
+ggplotly(box_bh)%>% 
+  layout(margin = list(t = 50, b = 50, l = 50, r = 50))
+```
 
+
+```{r}
+#| echo: false
 box_bl <- ggplot(egyptian, aes(x = period, y = basialveolar_length )) +
   geom_boxplot() +
   labs(title = "Boxplot da Comprimento Basialveolar por Período",
@@ -70,8 +91,13 @@ box_bl <- ggplot(egyptian, aes(x = period, y = basialveolar_length )) +
        y = "Comprimento Basialveolar (mm)") +
   theme_minimal()
 
-ggplotly(box_bl)
+ggplotly(box_bl)%>% 
+  layout(margin = list(t = 50, b = 50, l = 50, r = 50))
+```
 
+
+```{r}
+#| echo: false
 box_nh <- ggplot(egyptian, aes(x = period, y = nasal_height )) +
   geom_boxplot() +
   labs(title = "Boxplot da Altura Nasal por Período",
@@ -79,77 +105,71 @@ box_nh <- ggplot(egyptian, aes(x = period, y = nasal_height )) +
        y = "Altura Nasal (mm)") +
   theme_minimal()
 
-ggplotly(box_nh)
+ggplotly(box_nh)%>% 
+  layout(margin = list(t = 50, b = 50, l = 50, r = 50))
 
 ```
 
-1. Qual o valor típico de cada período?
 
-Observando a Largura Máxima de um crânio egípsio (em mm), a mediana no período romano é superior ao período pré-dinástico Primitivo, sugerindo um aumento ao longo do tempo. Na Altura Basibregmática, se pode notar que a mediana possue sentido contrário, com o passar dos períodos, diminui para 130 mm, onde se percebe ainda que na altura mediana no período romano é a altura mínima no périodo anterior (período ptolomaico). Comportamento parecido sendo observado no Comprimento Basialveolar, onde a mediana no período romano diminuiu significativamente em relação ao período anterior. Na Altura Nasal, a mediana no período romano é a mais alta, indicando um aumento ao longo do tempo.
+### Valores típicos
 
-2. Quão espalhadas as variáveis estão dos dados?
+**Largura Máxima e Altura Nasal**: apresentam tendência de crescimento gradual ao longo dos período, com as maiores medianas registradas no período Romano.
 
-Largura Máxima
+**Altura Basibregmática e Comprimento Basialveolar**: mostram uma tendência descrescente, com redução dessas medidas craniana com o passar do tempo.
 
-Em relação a disperção ou variabilidade se pode notar que, no período 12º e 13º dinástias tem caixa e haste mais compactas em comparação ao período pré-dinástico primitivo, sugerindo maior variabilidade nos valores menores.
+### Variabilidade 
 
-Altura Basibregmática
+**Mais homogêneos (menos variáveis)**: períodos com caixas e hastes curtas, com 12ª e 13ª dinástico na Largura Máxima e o período Ptolomaico na Altura Basibregmática.
 
-Por sua vez, no período ptolemaico a caixa e hastes são mais compactar em comparação aos períodos anteriores que apresentam hastes superiores, indicando maior variabilidade nos maiores valores, enquanto que no período posterior, se nota o inverso, variabilidade nos valores menores.
+**Mais heterogêneos (mais variáveis)**: o período Pré-dinástico Primitivo apresenta maior disperção (caixas maiores e hastes longas), nas variáveis de largura e comprimento.
 
-Comprimento Basialveolar
+### Valores Atípicos(outliers)
 
-No periodo 12º 13º dinástico se observar novamente pouca variabilidade em comparação ao período pré-dinástico primitivo, com alta variabilidade superior. Ocorre pouca variabilidade no período romano.
+No boxplot de Largura Máxima, se observa ponto fora do padrão da época no período Pré-dinástico Antigo. Sendo identificado outliers em 3 dos 4 gráficos, sugerindo que houve crânios com medidas que fugiram ao padrão da época.
 
-Altura Nasal
+### Simetria
 
-No período pré-dinástico antigo, a caixa e hastes são mais compactas, indicando menor variabilidade em relação a outros períodos.
+Assimetria Positiva: mediana próxima ao fundo da caixa (Q1). Como na Largura Máxima no Período Ptolemaico.
 
+Assimetria Negatica: mediana próxima ao topo da caixa (Q3). Como no período Ptolomaico para o Comprimento Basialveolar.
 
-3. Existem valores atípicos?
+Simetria: mediana no centro da caixa e hastes equivalente. No período Romano na Largura Máxima, se pode observar uma distribuição aproximadamente simétrica.
 
-Dos quatro boxplots apresentados, três deles apresentam valores atípicos, nos períodos pré-dinástico antigo, pré-dinástico primitivo, período ptolomaico e período romano, respectivamente. 
-
-4. Os dados são simétricos?
-
-Largura Máxima
-
-Existe assimetria à direita no período pré-dinástico primitivo, antigo e ptolemaico indicando que a maioria dos crânios tem largura máxima menor, mas há alguns com valores maiores com assimetria negativa como no período 12º e 13º dinástico. Sendo o período romano o que mais se aproxima de uma distribuição simetrica.
-
-Altura Basibregmática
-
-Nos períodos 12º e 13º dinástico e ptolomaico, são os que apresentam assimetria positiva, nos períodos primitivo, antigo  a assimetria já é negativa enquanto que no período romano parece existir uma simetria.
-
-Comprimento Basialveolar
-
-Os períodos antigo, 12º e 13º dinástico e romano possuem simetria. Enquanto que os período primitivo e ptolomaico possuem assimetria negativa.
+Se pode concluir que há um aumento gradual na Largura Máxima dos crânios ao longo dos séculos. O período mais homogêneo é o 12ª e 13ª dinástico, possuindo caixa mais compacta. Enquanto que o período Pré-dinástico antigo é mais heterogêneo, com haste inferior longa, indicando grande variabilidade entre crâneos de menor largura.
 
 
-```{r include=FALSE}
+```{r}
+#| eval: false
+#| include: false
 
 #skewness(egyptian$maximum_breadth[egyptian$period == ""])
 
 ```
 
 
-5. Existe diferença real entre os período comparados?
+## Gráfico de Faces de Chernoff
 
+```{r}
+#| echo: false
+#| message: false
+#| results: "hide"
 
+faces_md <- egyptian%>%
+  group_by(period)%>%
+  summarise(across(c(maximum_breadth,basibregmatic_height, basialveolar_length, nasal_height), mean))%>%
+  column_to_rownames("period")
 
-
-```{r grafico_chernoff}
-## Gráfico de Faces
-#| eval: false
-#| include: false
-faces(egyptian[2:5], face.type = 1, scale = T, labels = egyptian$period, plot.faces = T, nrow.plot = 2, ncol.plot = 5)
+rownames(faces_md) <- c("EP", "LP", "D12-13", "PP", "RP")
+faces(faces_md, face.type = 1, main = "Gráfico de Faces de Chernoff: por Período", nrow.plot = 1, ncol.plot = 5)
 ```
+
 
 ## Gráfico de Pares
 
 ```{r}
 #| echo: false
 #| menssage: false
-
+#| 
 scatterplotMatrix(~ maximum_breadth + basibregmatic_height+ basialveolar_length + nasal_height, 
                     data = egyptian,
                     smooth = list(style = "line"),
@@ -181,10 +201,20 @@ cv_perf <- ggplot(cv_perfil, aes( x = reorder(Variavel, CV), y = CV, fill = peri
        y = "Coeficiente de Variação (%)") +
   theme_minimal() +
   scale_fill_brewer(palette = "PuBu") 
-ggplotly(cv_perf)
+ggplotly(cv_perf)%>% 
+  layout(margin = list(t = 50, b = 50, l = 50, r = 50))
 ```
 
-Como os Coeficientes de Variação por período são inferiores a 50%, sendo o máximo obtido de 7.24%, indica que a média é representativa ao conjunto de dados. Sendo menores valores nos período ptolomaico na altura nasal, seguido do período pré-dinástico primitivo. O período pré-dinástico antigo no comprimento Basialveolar, seguido do período 12º e 13º dinástico, em Altura Basibregmática o período pré-dinástico primitico seguido do pré-dinástico antigo são os com os menores coeficentes de variação e em Largura Máxima, os período Ptlomaico e 12º e 13º dinástico possuem os menores valores de variação percentual.
+
+O gráfico indica que conforme passou os períodos do Pré-dinástico ao Romano, a variação nas característica crânianas tendeu a aumentar. Por media, o que se observa:
+
+1. Altura Nasal: apresenta a maior variabilidade geral, com pico no período Romano, que evidencia que o formato do nariz era a característica mais diversa entre os indivíduos naquele período.
+
+2. Largura Máxima e Altura basibregmática: são as medidas mais homogêneas, com a maiora dos coeficientes estando abaixo de 4%.
+
+Como já observado, o período Romano se destaca por ter maior variação em quase todas as categorias, que evidencia uma maior diversidade biológica durante o período Romano, comparado aos períodos mais antigos.
+
+Na variável comprimento basialveolar, o período Pré-dinático primitvo mostra uma variação maior do que os períodos posteriores, quebrando um comportamento de crescimento gradual.
 
 
 ## Perfis das Variáveis
@@ -205,7 +235,7 @@ perf_v_period <- ggplot(perfil_md, aes(x = Variavel, y = round(Media,2), group =
   theme_minimal() +
   labs(title = "Perfil das Variáveis por Período",
        x = "Variáveis Craniométricas",
-       y = "Média (mm)")
+       y = "Média (mm)") 
 
 ggplotly(perf_v_period)
 
@@ -220,10 +250,12 @@ perf_v_bar <- ggplot(perfil_md, aes(x = Variavel, y = round(Media,2), fill = per
   labs(title = "Perfil das Variáveis por Período",
        x = "Variáveis Craniométricas",
        y = "Média (mm)") +
-  scale_fill_brewer(palette = "PuBu")
+  scale_fill_brewer(palette = "Set3")
 
 ggplotly(perf_v_bar)
 ```
+
+
 
 
 

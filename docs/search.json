@@ -14,7 +14,7 @@
     "href": "index.html#sobre-o-exemplo-escolhido",
     "title": "Análise Exploratória Multivariada - Tarefa 1",
     "section": "1.1 Sobre o exemplo escolhido:",
-    "text": "1.1 Sobre o exemplo escolhido:\nO conjunto de dados “Egyptian skulls” contém informações sobre crânios egípcios masculinos (em mm) da área de Tebas, no Egito. Há cinco amostras de 30 crânios cada uma do período pré-dinástico primitivo (cerca de 4000 a.C.), do período pré-dinástico antigo (cerca de 3300 a.C.), das 12ª e 13ª dinastias (cerca de 1850 a.C.), do período Ptolemaico (cerca de 200 a.C.) e do período Romano (cerca de 150 d.C.). Quatro medidas são apresentadas para cada crânio.\nQuestões abordadas no livro, são:\n\nComo estão relacionadas as quatro medidas?\nExistem diferenças estatisticamente significantes nas médias amostrais das variáveis, e, se existem, essas diferenças refletem mudanças graduais ao longo do tempo na forma e no tamanho dos crânios?\nExistem diferenças significantes nos desvios padrão amostrais para as variáveis, e, se existem, essas diferenças refletem mudanças graduais ao longo do tempo na quantidade de variação?\nÉ possível construir uma função das quatro variáveis que, em algum sentido, descreva as mudanças ao longo do tempo?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQual o valor típico de cada período?\n\nObservando a Largura Máxima de um crânio egípsio (em mm), a mediana no período romano é superior ao período pré-dinástico Primitivo, sugerindo um aumento ao longo do tempo. Na Altura Basibregmática, se pode notar que a mediana possue sentido contrário, com o passar dos períodos, diminui para 130 mm, onde se percebe ainda que na altura mediana no período romano é a altura mínima no périodo anterior (período ptolomaico). Comportamento parecido sendo observado no Comprimento Basialveolar, onde a mediana no período romano diminuiu significativamente em relação ao período anterior. Na Altura Nasal, a mediana no período romano é a mais alta, indicando um aumento ao longo do tempo.\n\nQuão espalhadas as variáveis estão dos dados?\n\nLargura Máxima\nEm relação a disperção ou variabilidade se pode notar que, no período 12º e 13º dinástias tem caixa e haste mais compactas em comparação ao período pré-dinástico primitivo, sugerindo maior variabilidade nos valores menores.\nAltura Basibregmática\nPor sua vez, no período ptolemaico a caixa e hastes são mais compactar em comparação aos períodos anteriores que apresentam hastes superiores, indicando maior variabilidade nos maiores valores, enquanto que no período posterior, se nota o inverso, variabilidade nos valores menores.\nComprimento Basialveolar\nNo periodo 12º 13º dinástico se observar novamente pouca variabilidade em comparação ao período pré-dinástico primitivo, com alta variabilidade superior. Ocorre pouca variabilidade no período romano.\nAltura Nasal\nNo período pré-dinástico antigo, a caixa e hastes são mais compactas, indicando menor variabilidade em relação a outros períodos.\n\nExistem valores atípicos?\n\nDos quatro boxplots apresentados, três deles apresentam valores atípicos, nos períodos pré-dinástico antigo, pré-dinástico primitivo, período ptolomaico e período romano, respectivamente.\n\nOs dados são simétricos?\n\nLargura Máxima\nExiste assimetria à direita no período pré-dinástico primitivo, antigo e ptolemaico indicando que a maioria dos crânios tem largura máxima menor, mas há alguns com valores maiores com assimetria negativa como no período 12º e 13º dinástico. Sendo o período romano o que mais se aproxima de uma distribuição simetrica.\nAltura Basibregmática\nNos períodos 12º e 13º dinástico e ptolomaico, são os que apresentam assimetria positiva, nos períodos primitivo, antigo a assimetria já é negativa enquanto que no período romano parece existir uma simetria.\nComprimento Basialveolar\nOs períodos antigo, 12º e 13º dinástico e romano possuem simetria. Enquanto que os período primitivo e ptolomaico possuem assimetria negativa.\n\nExiste diferença real entre os período comparados?",
+    "text": "1.1 Sobre o exemplo escolhido:\nO conjunto de dados “Egyptian skulls” contém informações sobre crânios egípcios masculinos (em mm) da área de Tebas, no Egito. Há cinco amostras de 30 crânios cada uma do período pré-dinástico primitivo (cerca de 4000 a.C.), do período pré-dinástico antigo (cerca de 3300 a.C.), das 12ª e 13ª dinastias (cerca de 1850 a.C.), do período Ptolemaico (cerca de 200 a.C.) e do período Romano (cerca de 150 d.C.). Quatro medidas são apresentadas para cada crânio.\nQuestões abordadas no livro, são:\n\nComo estão relacionadas as quatro medidas?\nExistem diferenças estatisticamente significantes nas médias amostrais das variáveis, e, se existem, essas diferenças refletem mudanças graduais ao longo do tempo na forma e no tamanho dos crânios?\nExistem diferenças significantes nos desvios padrão amostrais para as variáveis, e, se existem, essas diferenças refletem mudanças graduais ao longo do tempo na quantidade de variação?\nÉ possível construir uma função das quatro variáveis que, em algum sentido, descreva as mudanças ao longo do tempo?",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
     ]
@@ -33,8 +33,8 @@
     "objectID": "index.html#gráfico-de-pares",
     "href": "index.html#gráfico-de-pares",
     "title": "Análise Exploratória Multivariada - Tarefa 1",
-    "section": "1.3 Gráfico de Pares",
-    "text": "1.3 Gráfico de Pares",
+    "section": "1.4 Gráfico de Pares",
+    "text": "1.4 Gráfico de Pares",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
     ]
@@ -43,8 +43,8 @@
     "objectID": "index.html#coeficiênte-de-variação",
     "href": "index.html#coeficiênte-de-variação",
     "title": "Análise Exploratória Multivariada - Tarefa 1",
-    "section": "1.4 Coeficiênte de Variação",
-    "text": "1.4 Coeficiênte de Variação\n\n\n\n\n\n\nComo os Coeficientes de Variação por período são inferiores a 50%, sendo o máximo obtido de 7.24%, indica que a média é representativa ao conjunto de dados. Sendo menores valores nos período ptolomaico na altura nasal, seguido do período pré-dinástico primitivo. O período pré-dinástico antigo no comprimento Basialveolar, seguido do período 12º e 13º dinástico, em Altura Basibregmática o período pré-dinástico primitico seguido do pré-dinástico antigo são os com os menores coeficentes de variação e em Largura Máxima, os período Ptlomaico e 12º e 13º dinástico possuem os menores valores de variação percentual.",
+    "section": "1.5 Coeficiênte de Variação",
+    "text": "1.5 Coeficiênte de Variação\n\n\n\n\n\n\nO gráfico indica que conforme passou os períodos do Pré-dinástico ao Romano, a variação nas característica crânianas tendeu a aumentar. Por media, o que se observa:\n\nAltura Nasal: apresenta a maior variabilidade geral, com pico no período Romano, que evidencia que o formato do nariz era a característica mais diversa entre os indivíduos naquele período.\nLargura Máxima e Altura basibregmática: são as medidas mais homogêneas, com a maiora dos coeficientes estando abaixo de 4%.\n\nComo já observado, o período Romano se destaca por ter maior variação em quase todas as categorias, que evidencia uma maior diversidade biológica durante o período Romano, comparado aos períodos mais antigos.\nNa variável comprimento basialveolar, o período Pré-dinático primitvo mostra uma variação maior do que os períodos posteriores, quebrando um comportamento de crescimento gradual.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
     ]
@@ -53,8 +53,28 @@
     "objectID": "index.html#perfis-das-variáveis",
     "href": "index.html#perfis-das-variáveis",
     "title": "Análise Exploratória Multivariada - Tarefa 1",
-    "section": "1.5 Perfis das Variáveis",
-    "text": "1.5 Perfis das Variáveis",
+    "section": "1.6 Perfis das Variáveis",
+    "text": "1.6 Perfis das Variáveis",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#visualizando-os-dados",
+    "href": "index.html#visualizando-os-dados",
+    "title": "Análise Exploratória Multivariada - Tarefa 1",
+    "section": "1.2 Visualizando os dados",
+    "text": "1.2 Visualizando os dados\n\n\n# A tibble: 6 × 5\n  period   maximum_breadth basibregmatic_height basialveolar_length nasal_height\n  &lt;fct&gt;              &lt;dbl&gt;                &lt;dbl&gt;               &lt;dbl&gt;        &lt;dbl&gt;\n1 Early p…             131                  138                  89           49\n2 Early p…             125                  131                  92           48\n3 Early p…             131                  132                  99           50\n4 Early p…             119                  132                  96           44\n5 Early p…             136                  143                 100           54\n6 Early p…             138                  137                  89           56\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.1 Valores típicos\nLargura Máxima e Altura Nasal: apresentam tendência de crescimento gradual ao longo dos período, com as maiores medianas registradas no período Romano.\nAltura Basibregmática e Comprimento Basialveolar: mostram uma tendência descrescente, com redução dessas medidas craniana com o passar do tempo.\n\n\n1.2.2 Variabilidade\nMais homogêneos (menos variáveis): períodos com caixas e hastes curtas, com 12ª e 13ª dinástico na Largura Máxima e o período Ptolomaico na Altura Basibregmática.\nMais heterogêneos (mais variáveis): o período Pré-dinástico Primitivo apresenta maior disperção (caixas maiores e hastes longas), nas variáveis de largura e comprimento.\n\n\n1.2.3 Valores Atípicos(outliers)\nNo boxplot de Largura Máxima, se observa ponto fora do padrão da época no período Pré-dinástico Antigo. Sendo identificado outliers em 3 dos 4 gráficos, sugerindo que houve crânios com medidas que fugiram ao padrão da época.\n\n\n1.2.4 Simetria\nAssimetria Positiva: mediana próxima ao fundo da caixa (Q1). Como na Largura Máxima no Período Ptolemaico.\nAssimetria Negatica: mediana próxima ao topo da caixa (Q3). Como no período Ptolomaico para o Comprimento Basialveolar.\nSimetria: mediana no centro da caixa e hastes equivalente. No período Romano na Largura Máxima, se pode observar uma distribuição aproximadamente simétrica.\nSe pode concluir que há um aumento gradual na Largura Máxima dos crânios ao longo dos séculos. O período mais homogêneo é o 12ª e 13ª dinástico, possuindo caixa mais compacta. Enquanto que o período Pré-dinástico antigo é mais heterogêneo, com haste inferior longa, indicando grande variabilidade entre crâneos de menor largura.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#gráfico-de-faces-de-chernoff",
+    "href": "index.html#gráfico-de-faces-de-chernoff",
+    "title": "Análise Exploratória Multivariada - Tarefa 1",
+    "section": "1.3 Gráfico de Faces de Chernoff",
+    "text": "1.3 Gráfico de Faces de Chernoff",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
     ]
