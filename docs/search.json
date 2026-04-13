@@ -2,81 +2,121 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Análise Exploratória Multivariada - Tarefa 1",
+    "title": "Análise Exploratória Multivariada - Tarefas",
     "section": "",
-    "text": "1 Exemplo: Crânios egípcios",
+    "text": "1 Tarefa 1 - Exemplo: Crânios egípcios",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tarefa 1 - Exemplo: Crânios egípcios</span>"
     ]
   },
   {
     "objectID": "index.html#sobre-o-exemplo-escolhido",
     "href": "index.html#sobre-o-exemplo-escolhido",
-    "title": "Análise Exploratória Multivariada - Tarefa 1",
+    "title": "Análise Exploratória Multivariada - Tarefas",
     "section": "1.1 Sobre o exemplo escolhido:",
     "text": "1.1 Sobre o exemplo escolhido:\nO conjunto de dados “Egyptian skulls” contém informações sobre crânios egípcios masculinos (em mm) da área de Tebas, no Egito. Há cinco amostras de 30 crânios cada uma do período pré-dinástico primitivo (cerca de 4000 a.C.), do período pré-dinástico antigo (cerca de 3300 a.C.), das 12ª e 13ª dinastias (cerca de 1850 a.C.), do período Ptolemaico (cerca de 200 a.C.) e do período Romano (cerca de 150 d.C.). Quatro medidas são apresentadas para cada crânio.\nQuestões abordadas no livro, são:\n\nComo estão relacionadas as quatro medidas?\nExistem diferenças estatisticamente significantes nas médias amostrais das variáveis, e, se existem, essas diferenças refletem mudanças graduais ao longo do tempo na forma e no tamanho dos crânios?\nExistem diferenças significantes nos desvios padrão amostrais para as variáveis, e, se existem, essas diferenças refletem mudanças graduais ao longo do tempo na quantidade de variação?\nÉ possível construir uma função das quatro variáveis que, em algum sentido, descreva as mudanças ao longo do tempo?",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#gráfico-de-faces",
-    "href": "index.html#gráfico-de-faces",
-    "title": "Análise Exploratória Multivariada - Tarefa 1",
-    "section": "1.2 Gráfico de Faces",
-    "text": "1.2 Gráfico de Faces",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#gráfico-de-pares",
-    "href": "index.html#gráfico-de-pares",
-    "title": "Análise Exploratória Multivariada - Tarefa 1",
-    "section": "1.4 Gráfico de Pares",
-    "text": "1.4 Gráfico de Pares",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#coeficiênte-de-variação",
-    "href": "index.html#coeficiênte-de-variação",
-    "title": "Análise Exploratória Multivariada - Tarefa 1",
-    "section": "1.5 Coeficiênte de Variação",
-    "text": "1.5 Coeficiênte de Variação\n\n\n\n\n\n\nO gráfico indica que conforme passou os períodos do Pré-dinástico ao Romano, a variação nas característica crânianas tendeu a aumentar. Por media, o que se observa:\n\nAltura Nasal: apresenta a maior variabilidade geral, com pico no período Romano, que evidencia que o formato do nariz era a característica mais diversa entre os indivíduos naquele período.\nLargura Máxima e Altura basibregmática: são as medidas mais homogêneas, com a maiora dos coeficientes estando abaixo de 4%.\n\nComo já observado, o período Romano se destaca por ter maior variação em quase todas as categorias, que evidencia uma maior diversidade biológica durante o período Romano, comparado aos períodos mais antigos.\nNa variável comprimento basialveolar, o período Pré-dinático primitvo mostra uma variação maior do que os períodos posteriores, quebrando um comportamento de crescimento gradual.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#perfis-das-variáveis",
-    "href": "index.html#perfis-das-variáveis",
-    "title": "Análise Exploratória Multivariada - Tarefa 1",
-    "section": "1.6 Perfis das Variáveis",
-    "text": "1.6 Perfis das Variáveis",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tarefa 1 - Exemplo: Crânios egípcios</span>"
     ]
   },
   {
     "objectID": "index.html#visualizando-os-dados",
     "href": "index.html#visualizando-os-dados",
-    "title": "Análise Exploratória Multivariada - Tarefa 1",
+    "title": "Análise Exploratória Multivariada - Tarefas",
     "section": "1.2 Visualizando os dados",
     "text": "1.2 Visualizando os dados\n\n\n# A tibble: 6 × 5\n  period   maximum_breadth basibregmatic_height basialveolar_length nasal_height\n  &lt;fct&gt;              &lt;dbl&gt;                &lt;dbl&gt;               &lt;dbl&gt;        &lt;dbl&gt;\n1 Early p…             131                  138                  89           49\n2 Early p…             125                  131                  92           48\n3 Early p…             131                  132                  99           50\n4 Early p…             119                  132                  96           44\n5 Early p…             136                  143                 100           54\n6 Early p…             138                  137                  89           56\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.1 Valores típicos\nLargura Máxima e Altura Nasal: apresentam tendência de crescimento gradual ao longo dos período, com as maiores medianas registradas no período Romano.\nAltura Basibregmática e Comprimento Basialveolar: mostram uma tendência descrescente, com redução dessas medidas craniana com o passar do tempo.\n\n\n1.2.2 Variabilidade\nMais homogêneos (menos variáveis): períodos com caixas e hastes curtas, com 12ª e 13ª dinástico na Largura Máxima e o período Ptolomaico na Altura Basibregmática.\nMais heterogêneos (mais variáveis): o período Pré-dinástico Primitivo apresenta maior disperção (caixas maiores e hastes longas), nas variáveis de largura e comprimento.\n\n\n1.2.3 Valores Atípicos(outliers)\nNo boxplot de Largura Máxima, se observa ponto fora do padrão da época no período Pré-dinástico Antigo. Sendo identificado outliers em 3 dos 4 gráficos, sugerindo que houve crânios com medidas que fugiram ao padrão da época.\n\n\n1.2.4 Simetria\nAssimetria Positiva: mediana próxima ao fundo da caixa (Q1). Como na Largura Máxima no Período Ptolemaico.\nAssimetria Negatica: mediana próxima ao topo da caixa (Q3). Como no período Ptolomaico para o Comprimento Basialveolar.\nSimetria: mediana no centro da caixa e hastes equivalente. No período Romano na Largura Máxima, se pode observar uma distribuição aproximadamente simétrica.\nSe pode concluir que há um aumento gradual na Largura Máxima dos crânios ao longo dos séculos. O período mais homogêneo é o 12ª e 13ª dinástico, possuindo caixa mais compacta. Enquanto que o período Pré-dinástico antigo é mais heterogêneo, com haste inferior longa, indicando grande variabilidade entre crâneos de menor largura.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tarefa 1 - Exemplo: Crânios egípcios</span>"
     ]
   },
   {
     "objectID": "index.html#gráfico-de-faces-de-chernoff",
     "href": "index.html#gráfico-de-faces-de-chernoff",
-    "title": "Análise Exploratória Multivariada - Tarefa 1",
+    "title": "Análise Exploratória Multivariada - Tarefas",
     "section": "1.3 Gráfico de Faces de Chernoff",
     "text": "1.3 Gráfico de Faces de Chernoff",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Exemplo: Crânios egípcios</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tarefa 1 - Exemplo: Crânios egípcios</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#gráfico-de-pares",
+    "href": "index.html#gráfico-de-pares",
+    "title": "Análise Exploratória Multivariada - Tarefas",
+    "section": "1.4 Gráfico de Pares",
+    "text": "1.4 Gráfico de Pares",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tarefa 1 - Exemplo: Crânios egípcios</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#coeficiênte-de-variação",
+    "href": "index.html#coeficiênte-de-variação",
+    "title": "Análise Exploratória Multivariada - Tarefas",
+    "section": "1.5 Coeficiênte de Variação",
+    "text": "1.5 Coeficiênte de Variação\n\n\n\n\n\n\nO gráfico indica que conforme passou os períodos do Pré-dinástico ao Romano, a variação nas característica crânianas tendeu a aumentar. Por media, o que se observa:\n\nAltura Nasal: apresenta a maior variabilidade geral, com pico no período Romano, que evidencia que o formato do nariz era a característica mais diversa entre os indivíduos naquele período.\nLargura Máxima e Altura basibregmática: são as medidas mais homogêneas, com a maiora dos coeficientes estando abaixo de 4%.\n\nComo já observado, o período Romano se destaca por ter maior variação em quase todas as categorias, que evidencia uma maior diversidade biológica durante o período Romano, comparado aos períodos mais antigos.\nNa variável comprimento basialveolar, o período Pré-dinático primitvo mostra uma variação maior do que os períodos posteriores, quebrando um comportamento de crescimento gradual.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tarefa 1 - Exemplo: Crânios egípcios</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#perfis-das-variáveis",
+    "href": "index.html#perfis-das-variáveis",
+    "title": "Análise Exploratória Multivariada - Tarefas",
+    "section": "1.6 Perfis das Variáveis",
+    "text": "1.6 Perfis das Variáveis",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tarefa 1 - Exemplo: Crânios egípcios</span>"
+    ]
+  },
+  {
+    "objectID": "ACP.html",
+    "href": "ACP.html",
+    "title": "2  Tarefa 2 - Análise Componentes Principais",
+    "section": "",
+    "text": "3 Exemplo 6.1 - Pardocas\nKarl Pearson (1901), inicialmente descreveu a técnica de análise de componentes principais. Ele acreditou que era a solução correta para alguns problemas de interesse biométricos naquele tempo. Hotelling (1933), posteriormente descreveu métodos computacionais práticos, mesmo naquele momento, os cáculos eram complexos para poucas variáveis porque tinham que ser feitos à mão.\nA análise de componentes principais é um dos métodos multivariados mais simples, com objetivo de encontrar p variáveis \\(X_1, X_2,...,X_p\\) e encontrar combinações destas para produzir índices \\(Z_1, Z_2,...,Z_p\\) que sejam não correlacionados na ordem de sua importância, e que descrevam a variação nos dados. Os índices \\(Z\\) são, os componentes principais.\nApós uma forte tempestade em 1º de fevereiro de 1898, diversos pardais moribundos foram levados ao laboratório biológico de Hermon Bumpus na Universidade de Brown em Rhode Island. Subsequentemente, cerca de metade dos pássaros morreu, e Bumpus viu isso como uma oportunidade de encontrar suporte para a teoria da seleção natural de Charles Darwin. Para esse fim, ele fez oito medidas morfológicas em cada pássaro, e também os pesou. Os resultados de cinco das medidas são mostrados na Tabela 1.1, para fêmeas somente.\npardocas &lt;- read.csv(\"Bumpus_sparrows.csv\")\n\nva_pardocas &lt;- pardocas[,-1]\nhead(va_pardocas, 5)\n\n  Total_length Alar_extent L_beak_head L_humerous L_keel_sternum\n1          156         245        31.6       18.5           20.5\n2          154         240        30.4       17.9           19.6\n3          153         240        31.0       18.4           20.6\n4          153         236        30.9       17.7           20.2\n5          155         243        31.5       18.6           20.3\n# Covariâncias da variáveis\n\n# Zi é a combinação linear das variáveis originais multiplicadas por escalares.\n# \n# A variância de Zi, é o lambda i que é um autovalor - os autovalores são as variância dos componentes principais.\n# Os escalares (constantes aij) são os componentes dos autovetor escalonado. No qual a soma dessas constantes ao quadrado seja 1.\n# \nva_pard_mtx_cov &lt;- cov(va_pardocas)\nva_pard_mtx_cov[upper.tri(va_pard_mtx_cov, diag = F)] &lt;- NA\n\nprint(\"Matrix de covariância das variáveis\")\n\n[1] \"Matrix de covariância das variáveis\"\n\nprint(round(va_pard_mtx_cov,4))\n\n               Total_length Alar_extent L_beak_head L_humerous L_keel_sternum\nTotal_length        13.3537          NA          NA         NA             NA\nAlar_extent         13.6110     25.6828          NA         NA             NA\nL_beak_head          1.9221      2.7136      0.6316         NA             NA\nL_humerous           1.3306      2.1977      0.3423     0.3184             NA\nL_keel_sternum       2.1922      2.6578      0.4146     0.3394         0.9828\n\nvar_va_pard &lt;- diag(va_pard_mtx_cov)\n\n\nprint(cat(\"\\n\",\"Variâncias das Variáveis originais\"))\n\n\n Variâncias das Variáveis originaisNULL\n\nvar_va_pard\n\n  Total_length    Alar_extent    L_beak_head     L_humerous L_keel_sternum \n    13.3537415     25.6828231      0.6316327      0.3184184      0.9828231 \n\ntraco_var_va_pard &lt;- sum(var_va_pard)\nprint(cat(\"\\n\",\"Traço: \",round(traco_var_va_pard,4), \"\\n\"))\n\n\n Traço:  40.9694 \nNULL\n\n# Correlação das variáveis\n\nva_pard_mtx_cor &lt;- cor(va_pardocas)\n\nva_pard_mtx_cor[upper.tri(va_pard_mtx_cor, diag = F)] &lt;- NA\n\nprint(cat(\"\\n\",\"Matrix de correlação das variáveis\"))\n\n\n Matrix de correlação das variáveisNULL\n\nprint(round(va_pard_mtx_cor,4))\n\n               Total_length Alar_extent L_beak_head L_humerous L_keel_sternum\nTotal_length         1.0000          NA          NA         NA             NA\nAlar_extent          0.7350      1.0000          NA         NA             NA\nL_beak_head          0.6618      0.6737      1.0000         NA             NA\nL_humerous           0.6453      0.7685      0.7632     1.0000             NA\nL_keel_sternum       0.6051      0.5290      0.5263     0.6066              1\n\nsum_diag_corr_pard &lt;- sum(diag(va_pard_mtx_cor))\n\n\nprint(cat(\"\\n\",\"Traço: \",round(sum_diag_corr_pard,4), \"\\n\"))\n\n\n Traço:  5 \nNULL",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tarefa 2 - Análise Componentes Principais</span>"
+    ]
+  },
+  {
+    "objectID": "ACP.html#padronização",
+    "href": "ACP.html#padronização",
+    "title": "2  Tarefa 2 - Análise Componentes Principais",
+    "section": "3.1 Padronização",
+    "text": "3.1 Padronização\n\npca1 &lt;- prcomp(va_pardocas, scale. = T) \n\nsummary(pca1)\n\nImportance of components:\n                          PC1    PC2     PC3     PC4     PC5\nStandard deviation     1.9016 0.7290 0.62163 0.54915 0.40562\nProportion of Variance 0.7232 0.1063 0.07728 0.06031 0.03291\nCumulative Proportion  0.7232 0.8295 0.90678 0.96709 1.00000",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tarefa 2 - Análise Componentes Principais</span>"
+    ]
+  },
+  {
+    "objectID": "ACP.html#autovalores-e-autovetores",
+    "href": "ACP.html#autovalores-e-autovetores",
+    "title": "2  Tarefa 2 - Análise Componentes Principais",
+    "section": "3.2 Autovalores e Autovetores",
+    "text": "3.2 Autovalores e Autovetores\n\nautovalores1&lt;- pca1$sdev^2\n\nautovetores1 &lt;- pca1$rotation\n\n\nescore &lt;- pca1$x\n\n\nprint(cat(\"\\n\",\"Autovalores: \\n \",round(autovalores1,4), \"\\n\"))\n\n\n Autovalores: \n  3.616 0.5315 0.3864 0.3016 0.1645 \nNULL\n\n\n\n\n\n Autovetores: \n NULL\n\n\n                     PC1         PC2        PC3         PC4        PC5\nTotal_length   0.4517989 -0.05072137 -0.6904702  0.42041399  0.3739091\nAlar_extent    0.4616809  0.29956355 -0.3405484 -0.54786307 -0.5300805\nL_beak_head    0.4505416  0.32457242  0.4544927  0.60629605 -0.3427923\nL_humerous     0.4707389  0.18468403  0.4109350 -0.38827811  0.6516665\nL_keel_sternum 0.3976754 -0.87648935  0.1784558 -0.06887199 -0.1924341\n\n\n\ngraf_escor &lt;- cbind(data.frame(pardocas$Survivorship),escore)\n\nplot(graf_escor$PC1, graf_escor$PC2,\n     pch = ifelse(pardocas$Survivorship == \"S\", 1, 16),\n     xlab = \"PC1\", ylab = \"PC2\")\nabline(h=0)\nabline(v=0)\nlegend(\"bottomleft\", legend=c(\"Sobrevive\",\"Não sobrevive\"), pch=c(1,16))",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tarefa 2 - Análise Componentes Principais</span>"
+    ]
+  },
+  {
+    "objectID": "ACP.html#proporções-das-variâncias",
+    "href": "ACP.html#proporções-das-variâncias",
+    "title": "2  Tarefa 2 - Análise Componentes Principais",
+    "section": "3.3 Proporções das Variâncias",
+    "text": "3.3 Proporções das Variâncias\n\nlambda_s &lt;- sum(autovetores1)\n\nprop_var &lt;- autovalores1/lambda_s\n\ncumvar &lt;- cumsum(prop_var)\n\nmatlambdas &lt;- rbind(autovalores1,prop_var, cumvar)\n\nrownames(matlambdas) &lt;- c(\"Autovalores\",\n                          \"Proporção das Variâncias\",\"Soma Cumulativa das Variâncias Proporcionais\")\n\nround(matlambdas,4)\n\n                                               [,1]   [,2]   [,3]   [,4]   [,5]\nAutovalores                                  3.6160 0.5315 0.3864 0.3016 0.1645\nProporção das Variâncias                     1.7146 0.2520 0.1832 0.1430 0.0780\nSoma Cumulativa das Variâncias Proporcionais 1.7146 1.9667 2.1499 2.2929 2.3709\n\n\n\ngraf_escor &lt;- cbind(data.frame(pardocas$Survivorship),escore)\n\nplot(graf_escor$PC1, graf_escor$PC2,\n     pch = ifelse(pardocas$Survivorship == \"S\", 1, 16),\n     xlab = \"PC1\", ylab = \"PC2\")\nabline(h=0)\nabline(v=0)\nlegend(\"bottomleft\", legend=c(\"Sobrevive\",\"Não sobrevive\"), pch=c(1,16))",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tarefa 2 - Análise Componentes Principais</span>"
+    ]
+  },
+  {
+    "objectID": "ACP.html#pca---autovalores-autovetores",
+    "href": "ACP.html#pca---autovalores-autovetores",
+    "title": "2  Tarefa 2 - Análise Componentes Principais",
+    "section": "4.1 PCA - Autovalores & Autovetores",
+    "text": "4.1 PCA - Autovalores & Autovetores\n\npca2 &lt;- prcomp(va_emprego, scale. = T)\n\nsummary(pca2)\n\nImportance of components:\n                          PC1    PC2    PC3    PC4     PC5     PC6    PC7\nStandard deviation     1.7642 1.3451 1.2232 1.0312 0.84277 0.55798 0.5417\nProportion of Variance 0.3458 0.2010 0.1663 0.1182 0.07892 0.03459 0.0326\nCumulative Proportion  0.3458 0.5468 0.7131 0.8312 0.91016 0.94475 0.9774\n                           PC8      PC9\nStandard deviation     0.45146 0.002664\nProportion of Variance 0.02265 0.000000\nCumulative Proportion  1.00000 1.000000\n\n\n\n# Autovalores\n\nautovalores2 &lt;- pca2$sdev^2\n\nprint(cat(\"\\n\",\"Autovalores: \\n \",round(autovalores2, 4), \"\\n\"))\n\n\n Autovalores: \n  3.1123 1.8092 1.4962 1.0634 0.7103 0.3113 0.2934 0.2038 0 \nNULL\n\n# Autovetores\n\nprint(cat(\"\\n\",\"Autovetores: \\n \"))\n\n\n Autovetores: \n NULL\n\npca2$rotation\n\n           PC1          PC2         PC3         PC4         PC5         PC6\nAGR  0.5114918  0.023474999  0.27859140  0.01649218 -0.02403794 -0.04239691\nMIN  0.3749833 -0.000490734 -0.51505210  0.11360623  0.34631272  0.19857439\nMAN -0.2461613 -0.431752051  0.50205622  0.05827010 -0.23362179 -0.03091715\nPS  -0.3161203 -0.109144430  0.29369499  0.02324549  0.85444839  0.20647051\nCON -0.2215986  0.242470912 -0.07153072  0.78266601  0.06215096 -0.50263565\nSER -0.3815359  0.408255893 -0.06514938  0.16903778 -0.26667324  0.67269361\nFIN -0.1310884  0.552938958  0.09565440 -0.48921763  0.13128795 -0.40593492\nSPS -0.4281618 -0.054705874 -0.36015928 -0.31724250 -0.04571821 -0.15845276\nTC  -0.2050706 -0.516649883 -0.41299565 -0.04206329 -0.02290077 -0.14189804\n            PC7         PC8        PC9\nAGR -0.16357428 -0.54040909 0.58203611\nMIN  0.21259036  0.44859201 0.41881803\nMAN  0.23601541  0.43175735 0.44708636\nPS  -0.06056504 -0.15512240 0.03025124\nCON -0.02028469 -0.03082345 0.12865575\nSER  0.17483893 -0.20175280 0.24502068\nFIN  0.45764510  0.02726352 0.19075812\nSPS -0.62133030  0.04147562 0.41031481\nTC   0.49214521 -0.50212355 0.06074315\n\nescore &lt;- pca2$x\n\ngraf_escor2 &lt;- data.frame(escore)\n\n\nplot(graf_escor2$PC1, graf_escor2$PC2, type=\"n\", \n     xlab=\"PC1\", ylab=\"PC2\", main=\"\")\ntext(graf_escor2$PC1, graf_escor2$PC2,labels=emprego$Country, cex=0.5)\nabline(h=0)\nabline(v=0)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tarefa 2 - Análise Componentes Principais</span>"
     ]
   }
 ]

@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "Análise Exploratória Multivariada - Tarefa 1"
+  title: "Análise Exploratória Multivariada - Tarefas"
   author: "Ana Caroline Alexandre Pantoja"
   date: last-modified
   sidebar:
@@ -11,7 +11,7 @@ book:
     collapse-level: 2
   chapters:
     - index.qmd
-    - references.qmd
+    - ACP.qmd
 format:
   html:
     theme:  

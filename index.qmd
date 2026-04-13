@@ -1,5 +1,4 @@
-
-# Exemplo: Crânios egípcios
+# Tarefa 1 - Exemplo: Crânios egípcios
 
 ## Sobre o exemplo escolhido:
 
