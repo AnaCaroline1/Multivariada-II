@@ -11,7 +11,8 @@ book:
     collapse-level: 2
   chapters:
     - index.qmd
-    - ACP.qmd
+    - tarefa_1_multi.qmd
+    - tarefa2_ACP.qmd
     - tarefa3_AF.qmd
 format:
   html:

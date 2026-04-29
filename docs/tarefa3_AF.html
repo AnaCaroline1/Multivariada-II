@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Tarefa 3 - Análise Fatorial – Análise Exploratória Multivariada - Tarefas</title>
+<title>4&nbsp; Tarefa 3 - Análise Fatorial – Análise Exploratória Multivariada - Tarefas</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ACP.html" rel="prev">
+<link href="./tarefa2_ACP.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -314,7 +314,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tarefa3_AF.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarefa 3 - Análise Fatorial</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tarefa3_AF.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarefa 3 - Análise Fatorial</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -345,19 +345,25 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Tarefa 1 - Exemplo: Crânios egípcios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Análise Multivariada II</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ACP.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></span></a>
+  <a href="./tarefa_1_multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tarefa 1 - Exemplo: Crânios egípcios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tarefa2_ACP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tarefa3_AF.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarefa 3 - Análise Fatorial</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarefa 3 - Análise Fatorial</span></span></a>
   </div>
 </li>
     </ul>
@@ -370,16 +376,16 @@ window.Quarto = {
     <h2 id="toc-title">Sumário</h2>
    
   <ul>
-  <li><a href="#descrição-do-exemplo-7.1---emprego-em-países-europeus" id="toc-descrição-do-exemplo-7.1---emprego-em-países-europeus" class="nav-link active" data-scroll-target="#descrição-do-exemplo-7.1---emprego-em-países-europeus"><span class="header-section-number">3.1</span> Descrição do exemplo 7.1 - Emprego em países europeus</a></li>
-  <li><a href="#análise-fatorial-exploratória" id="toc-análise-fatorial-exploratória" class="nav-link" data-scroll-target="#análise-fatorial-exploratória"><span class="header-section-number">3.2</span> Análise Fatorial Exploratória</a>
+  <li><a href="#descrição-do-exemplo-7.1---emprego-em-países-europeus" id="toc-descrição-do-exemplo-7.1---emprego-em-países-europeus" class="nav-link active" data-scroll-target="#descrição-do-exemplo-7.1---emprego-em-países-europeus"><span class="header-section-number">4.1</span> Descrição do exemplo 7.1 - Emprego em países europeus</a></li>
+  <li><a href="#análise-fatorial-exploratória" id="toc-análise-fatorial-exploratória" class="nav-link" data-scroll-target="#análise-fatorial-exploratória"><span class="header-section-number">4.2</span> Análise Fatorial Exploratória</a>
   <ul class="collapse">
-  <li><a href="#teste-de-bartlett" id="toc-teste-de-bartlett" class="nav-link" data-scroll-target="#teste-de-bartlett"><span class="header-section-number">3.2.1</span> Teste de Bartlett</a></li>
-  <li><a href="#teste-de-kaiser-meyer-olkin" id="toc-teste-de-kaiser-meyer-olkin" class="nav-link" data-scroll-target="#teste-de-kaiser-meyer-olkin"><span class="header-section-number">3.2.2</span> Teste de Kaiser-Meyer-Olkin</a></li>
-  <li><a href="#aplicação-para-número-de-fatores-9" id="toc-aplicação-para-número-de-fatores-9" class="nav-link" data-scroll-target="#aplicação-para-número-de-fatores-9"><span class="header-section-number">3.2.3</span> Aplicação para número de fatores = 9</a></li>
-  <li><a href="#aplicação-para-número-de-fatores-4" id="toc-aplicação-para-número-de-fatores-4" class="nav-link" data-scroll-target="#aplicação-para-número-de-fatores-4"><span class="header-section-number">3.2.4</span> Aplicação para número de fatores = 4</a></li>
+  <li><a href="#teste-de-bartlett" id="toc-teste-de-bartlett" class="nav-link" data-scroll-target="#teste-de-bartlett"><span class="header-section-number">4.2.1</span> Teste de Bartlett</a></li>
+  <li><a href="#teste-de-kaiser-meyer-olkin" id="toc-teste-de-kaiser-meyer-olkin" class="nav-link" data-scroll-target="#teste-de-kaiser-meyer-olkin"><span class="header-section-number">4.2.2</span> Teste de Kaiser-Meyer-Olkin</a></li>
+  <li><a href="#aplicação-para-número-de-fatores-9" id="toc-aplicação-para-número-de-fatores-9" class="nav-link" data-scroll-target="#aplicação-para-número-de-fatores-9"><span class="header-section-number">4.2.3</span> Aplicação para número de fatores = 9</a></li>
+  <li><a href="#aplicação-para-número-de-fatores-4" id="toc-aplicação-para-número-de-fatores-4" class="nav-link" data-scroll-target="#aplicação-para-número-de-fatores-4"><span class="header-section-number">4.2.4</span> Aplicação para número de fatores = 4</a></li>
   </ul></li>
-  <li><a href="#cargas-fatoriais" id="toc-cargas-fatoriais" class="nav-link" data-scroll-target="#cargas-fatoriais"><span class="header-section-number">3.3</span> Cargas fatoriais</a></li>
-  <li><a href="#comunalidades" id="toc-comunalidades" class="nav-link" data-scroll-target="#comunalidades"><span class="header-section-number">3.4</span> Comunalidades</a></li>
+  <li><a href="#cargas-fatoriais" id="toc-cargas-fatoriais" class="nav-link" data-scroll-target="#cargas-fatoriais"><span class="header-section-number">4.3</span> Cargas fatoriais</a></li>
+  <li><a href="#comunalidades" id="toc-comunalidades" class="nav-link" data-scroll-target="#comunalidades"><span class="header-section-number">4.4</span> Comunalidades</a></li>
   </ul>
 </nav>
     </div>
@@ -389,7 +395,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarefa 3 - Análise Fatorial</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarefa 3 - Análise Fatorial</span></h1>
 </div>
 
 
@@ -407,8 +413,8 @@ window.Quarto = {
 
 
 <p>Para demonstrar a aplicação desta técnica, utilizou-se o Exemplo 7.1 (Emprego em países europeus), extraído da obra Métodos Estatísticos Multivariados: uma introdução (MANLY; NAVARRO ALBERTO, 2019).</p>
-<section id="descrição-do-exemplo-7.1---emprego-em-países-europeus" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="descrição-do-exemplo-7.1---emprego-em-países-europeus"><span class="header-section-number">3.1</span> Descrição do exemplo 7.1 - Emprego em países europeus</h2>
+<section id="descrição-do-exemplo-7.1---emprego-em-países-europeus" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="descrição-do-exemplo-7.1---emprego-em-países-europeus"><span class="header-section-number">4.1</span> Descrição do exemplo 7.1 - Emprego em países europeus</h2>
 <p>Considere os dados na Tabela 1.5. Eles mostram as porcentagens da força de trabalho em nove diferentes tipos de indústrias para 30 países europeus. Neste caso, méto-dos multivariados podem ser úteis para isolar grupos de países com padrões similares de empregos, e, em geral, ajudar a compreender os relacionamentos entre os países. Diferenças entre países que são relacionados a grupos políticos (UE, a União Europeia; AELC, a área europeia de livre comércio; países do leste europeu e outros países) podem ser de particular interesse.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(emprego)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -478,16 +484,16 @@ TC  -0.39132021  0.47492344  1.00000000</code></pre>
 </div>
 </div>
 </section>
-<section id="análise-fatorial-exploratória" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="análise-fatorial-exploratória"><span class="header-section-number">3.2</span> Análise Fatorial Exploratória</h2>
+<section id="análise-fatorial-exploratória" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="análise-fatorial-exploratória"><span class="header-section-number">4.2</span> Análise Fatorial Exploratória</h2>
 <p>Avaliando a fatorabilidade dos dados. Agrupando os dados em fatores, ou variáveis latentes com poder de descrever o objeto de estudo.</p>
 <p>Utilizando o <span class="math inline">\(pysch\)</span>, aplica-se os testes:</p>
 <ul>
 <li>Teste de Bartlett;</li>
 <li>Teste de Kaiser-Meyer-Olkin</li>
 </ul>
-<section id="teste-de-bartlett" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="teste-de-bartlett"><span class="header-section-number">3.2.1</span> Teste de Bartlett</h3>
+<section id="teste-de-bartlett" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="teste-de-bartlett"><span class="header-section-number">4.2.1</span> Teste de Bartlett</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>test_B <span class="ot">&lt;-</span> <span class="fu">cortest.bartlett</span>(va_analise)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
@@ -506,8 +512,8 @@ TC  -0.39132021  0.47492344  1.00000000</code></pre>
 </div>
 <p>Como o resulta do p-value = 0, isto indica que no teste de Bartlett os dados podem ser fatorados e a matriz de correlação observada não é a identidade.</p>
 </section>
-<section id="teste-de-kaiser-meyer-olkin" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="teste-de-kaiser-meyer-olkin"><span class="header-section-number">3.2.2</span> Teste de Kaiser-Meyer-Olkin</h3>
+<section id="teste-de-kaiser-meyer-olkin" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="teste-de-kaiser-meyer-olkin"><span class="header-section-number">4.2.2</span> Teste de Kaiser-Meyer-Olkin</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>test_kmo <span class="ot">&lt;-</span> <span class="fu">KMO</span>(va_analise)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -528,8 +534,8 @@ TC  -0.39132021  0.47492344  1.00000000</code></pre>
 </div>
 </div>
 </section>
-<section id="aplicação-para-número-de-fatores-9" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="aplicação-para-número-de-fatores-9"><span class="header-section-number">3.2.3</span> Aplicação para número de fatores = 9</h3>
+<section id="aplicação-para-número-de-fatores-9" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="aplicação-para-número-de-fatores-9"><span class="header-section-number">4.2.3</span> Aplicação para número de fatores = 9</h3>
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fator_all1 <span class="ot">&lt;-</span> <span class="fu">principal</span>(va_analise, <span class="at">nfactors =</span> <span class="dv">9</span>, <span class="at">rotate =</span> <span class="st">"varimax"</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -568,8 +574,8 @@ TC  -0.39132021  0.47492344  1.00000000</code></pre>
 </div>
 </div>
 </section>
-<section id="aplicação-para-número-de-fatores-4" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="aplicação-para-número-de-fatores-4"><span class="header-section-number">3.2.4</span> Aplicação para número de fatores = 4</h3>
+<section id="aplicação-para-número-de-fatores-4" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="aplicação-para-número-de-fatores-4"><span class="header-section-number">4.2.4</span> Aplicação para número de fatores = 4</h3>
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>fator_4_1 <span class="ot">&lt;-</span> <span class="fu">principal</span>(va_analise, <span class="at">nfactors =</span> <span class="dv">4</span>, <span class="at">rotate =</span> <span class="st">"varimax"</span>)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -609,8 +615,8 @@ TC  -0.39132021  0.47492344  1.00000000</code></pre>
 </div>
 </section>
 </section>
-<section id="cargas-fatoriais" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="cargas-fatoriais"><span class="header-section-number">3.3</span> Cargas fatoriais</h2>
+<section id="cargas-fatoriais" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="cargas-fatoriais"><span class="header-section-number">4.3</span> Cargas fatoriais</h2>
 <p>A carga fatorial é o coeficiente de correlação entre a variáveis e o fator, mostrando a variância explicativa pela variável naquele fator em particular.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -649,8 +655,8 @@ TC   0.72560041  0.033993516 -0.56836560 -0.14216634</code></pre>
 </div>
 </div>
 </section>
-<section id="comunalidades" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="comunalidades"><span class="header-section-number">3.4</span> Comunalidades</h2>
+<section id="comunalidades" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="comunalidades"><span class="header-section-number">4.4</span> Comunalidades</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>comunalidades <span class="ot">&lt;-</span> fator_4_1<span class="sc">$</span>communality</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1098,8 +1104,8 @@ TC   0.72560041  0.033993516 -0.56836560 -0.14216634</code></pre>
   </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./ACP.html" class="pagination-link" aria-label="Tarefa 2 - Análise Componentes Principais">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></span>
+      <a href="./tarefa2_ACP.html" class="pagination-link" aria-label="Tarefa 2 - Análise Componentes Principais">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

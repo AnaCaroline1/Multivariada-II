@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Tarefa 2 - Análise Componentes Principais – Análise Exploratória Multivariada - Tarefas</title>
+<title>3&nbsp; Tarefa 2 - Análise Componentes Principais – Análise Exploratória Multivariada - Tarefas</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -65,22 +68,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./index.html" rel="prev">
+<link href="./tarefa3_AF.html" rel="next">
+<link href="./tarefa_1_multi.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-eb767fe655e6f8c8224c258eed8bcfd8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-0d23d6da6e18eb1e53161bd2c3430360.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-eb767fe655e6f8c8224c258eed8bcfd8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-69f5d87fce721c7161903b402ddf0ba0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-444540097a86f2e28880b84aa5e54a8e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-69f5d87fce721c7161903b402ddf0ba0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -312,7 +315,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ACP.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tarefa2_ACP.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -325,9 +328,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Análise Exploratória Multivariada - Tarefas</a> 
         <div class="sidebar-tools-main">
@@ -345,13 +346,25 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Tarefa 1 - Exemplo: Crânios egípcios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Análise Multivariada II</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ACP.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></span></a>
+  <a href="./tarefa_1_multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tarefa 1 - Exemplo: Crânios egípcios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tarefa2_ACP.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tarefa3_AF.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarefa 3 - Análise Fatorial</span></span></a>
   </div>
 </li>
     </ul>
@@ -364,15 +377,15 @@ window.Quarto = {
     <h2 id="toc-title">Sumário</h2>
    
   <ul>
-  <li><a href="#exemplo-6.1---pardocas" id="toc-exemplo-6.1---pardocas" class="nav-link active" data-scroll-target="#exemplo-6.1---pardocas"><span class="header-section-number">3</span> Exemplo 6.1 - Pardocas</a>
+  <li><a href="#exemplo-6.1---pardocas" id="toc-exemplo-6.1---pardocas" class="nav-link active" data-scroll-target="#exemplo-6.1---pardocas"><span class="header-section-number">4</span> Exemplo 6.1 - Pardocas</a>
   <ul class="collapse">
-  <li><a href="#padronização" id="toc-padronização" class="nav-link" data-scroll-target="#padronização"><span class="header-section-number">3.1</span> Padronização</a></li>
-  <li><a href="#autovalores-e-autovetores" id="toc-autovalores-e-autovetores" class="nav-link" data-scroll-target="#autovalores-e-autovetores"><span class="header-section-number">3.2</span> Autovalores e Autovetores</a></li>
+  <li><a href="#padronização" id="toc-padronização" class="nav-link" data-scroll-target="#padronização"><span class="header-section-number">4.1</span> Padronização</a></li>
+  <li><a href="#autovalores-e-autovetores" id="toc-autovalores-e-autovetores" class="nav-link" data-scroll-target="#autovalores-e-autovetores"><span class="header-section-number">4.2</span> Autovalores e Autovetores</a></li>
   </ul></li>
-  <li><a href="#exemplo-6.2" id="toc-exemplo-6.2" class="nav-link" data-scroll-target="#exemplo-6.2"><span class="header-section-number">4</span> Exemplo 6.2</a>
+  <li><a href="#exemplo-6.2" id="toc-exemplo-6.2" class="nav-link" data-scroll-target="#exemplo-6.2"><span class="header-section-number">5</span> Exemplo 6.2</a>
   <ul class="collapse">
-  <li><a href="#tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa" id="toc-tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa" class="nav-link" data-scroll-target="#tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa"><span class="header-section-number">4.0.1</span> Tabela 1.5 Porcentagens da força de trabalho de empregados em nove diferentes grupos de indústrias em 30 países na Europa</a></li>
-  <li><a href="#pca---autovalores-autovetores" id="toc-pca---autovalores-autovetores" class="nav-link" data-scroll-target="#pca---autovalores-autovetores"><span class="header-section-number">4.1</span> PCA - Autovalores &amp; Autovetores</a></li>
+  <li><a href="#tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa" id="toc-tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa" class="nav-link" data-scroll-target="#tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa"><span class="header-section-number">5.0.1</span> Tabela 1.5 Porcentagens da força de trabalho de empregados em nove diferentes grupos de indústrias em 30 países na Europa</a></li>
+  <li><a href="#pca---autovalores-autovetores" id="toc-pca---autovalores-autovetores" class="nav-link" data-scroll-target="#pca---autovalores-autovetores"><span class="header-section-number">5.1</span> PCA - Autovalores &amp; Autovetores</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -383,7 +396,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tarefa 2 - Análise Componentes Principais</span></h1>
 </div>
 
 
@@ -402,8 +415,8 @@ window.Quarto = {
 
 <p>Karl Pearson (1901), inicialmente descreveu a técnica de análise de componentes principais. Ele acreditou que era a solução correta para alguns problemas de interesse biométricos naquele tempo. Hotelling (1933), posteriormente descreveu métodos computacionais práticos, mesmo naquele momento, os cáculos eram complexos para poucas variáveis porque tinham que ser feitos à mão.</p>
 <p>A análise de componentes principais é um dos métodos multivariados mais simples, com objetivo de encontrar p variáveis <span class="math inline">\(X_1, X_2,...,X_p\)</span> e encontrar combinações destas para produzir índices <span class="math inline">\(Z_1, Z_2,...,Z_p\)</span> que sejam não correlacionados na ordem de sua importância, e que descrevam a variação nos dados. Os índices <span class="math inline">\(Z\)</span> são, os componentes principais.</p>
-<section id="exemplo-6.1---pardocas" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Exemplo 6.1 - Pardocas</h1>
+<section id="exemplo-6.1---pardocas" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Exemplo 6.1 - Pardocas</h1>
 <p>Após uma forte tempestade em 1º de fevereiro de 1898, diversos pardais moribundos foram levados ao laboratório biológico de Hermon Bumpus na Universidade de Brown em Rhode Island. Subsequentemente, cerca de metade dos pássaros morreu, e Bumpus viu isso como uma oportunidade de encontrar suporte para a teoria da seleção natural de Charles Darwin. Para esse fim, ele fez oito medidas morfológicas em cada pássaro, e também os pesou. Os resultados de cinco das medidas são mostrados na Tabela 1.1, para fêmeas somente.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pardocas <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Bumpus_sparrows.csv"</span>)</span>
@@ -493,8 +506,8 @@ L_keel_sternum       0.6051      0.5290      0.5263     0.6066              1</c
 NULL</code></pre>
 </div>
 </div>
-<section id="padronização" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="padronização"><span class="header-section-number">3.1</span> Padronização</h2>
+<section id="padronização" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="padronização"><span class="header-section-number">4.1</span> Padronização</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>pca1 <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(va_pardocas, <span class="at">scale. =</span> T) </span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -508,8 +521,8 @@ Cumulative Proportion  0.7232 0.8295 0.90678 0.96709 1.00000</code></pre>
 </div>
 </div>
 </section>
-<section id="autovalores-e-autovetores" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="autovalores-e-autovetores"><span class="header-section-number">3.2</span> Autovalores e Autovetores</h2>
+<section id="autovalores-e-autovetores" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="autovalores-e-autovetores"><span class="header-section-number">4.2</span> Autovalores e Autovetores</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>autovalores1<span class="ot">&lt;-</span> pca1<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -554,18 +567,18 @@ L_keel_sternum 0.3976754 -0.87648935  0.1784558 -0.06887199 -0.1924341</code></p
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ACP_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="tarefa2_ACP_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="exemplo-6.2" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Exemplo 6.2</h1>
+<section id="exemplo-6.2" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Exemplo 6.2</h1>
 <p>Considere os dados na Tabela 1.5. Eles mostram as porcentagens da força de trabalho em nove diferentes tipos de indústrias para 30 países europeus. Neste caso, méto-dos multivariados podem ser úteis para isolar grupos de países com padrões similares de empregos, e, em geral, ajudar a compreender os relacionamentos entre os países. Diferenças entre países que são relacionados a grupos políti-cos (UE, a União Europeia; AELC, a área europeia de livre comércio; países do leste europeu e outros países) podem ser de particular interesse.</p>
-<section id="tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa" class="level3" data-number="4.0.1">
-<h3 data-number="4.0.1" class="anchored" data-anchor-id="tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa"><span class="header-section-number">4.0.1</span> Tabela 1.5 Porcentagens da força de trabalho de empregados em nove diferentes grupos de indústrias em 30 países na Europa</h3>
+<section id="tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="tabela-1.5-porcentagens-da-força-de-trabalho-de-empregados-em-nove-diferentes-grupos-de-indústrias-em-30-países-na-europa"><span class="header-section-number">5.0.1</span> Tabela 1.5 Porcentagens da força de trabalho de empregados em nove diferentes grupos de indústrias em 30 países na Europa</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="tabela1_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
@@ -591,7 +604,7 @@ L_keel_sternum 0.3976754 -0.87648935  0.1784558 -0.06887199 -0.1924341</code></p
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ACP_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="tarefa2_ACP_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -674,8 +687,8 @@ NULL</code></pre>
 </div>
 </div>
 </section>
-<section id="pca---autovalores-autovetores" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="pca---autovalores-autovetores"><span class="header-section-number">4.1</span> PCA - Autovalores &amp; Autovetores</h2>
+<section id="pca---autovalores-autovetores" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="pca---autovalores-autovetores"><span class="header-section-number">5.1</span> PCA - Autovalores &amp; Autovetores</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>pca2 <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(va_emprego, <span class="at">scale. =</span> T)</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -748,7 +761,7 @@ TC   0.49214521 -0.50212355 0.06074315</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ACP_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="tarefa2_ACP_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1174,11 +1187,14 @@ TC   0.49214521 -0.50212355 0.06074315</code></pre>
   </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Tarefa 1 - Exemplo: Crânios egípcios">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Tarefa 1 - Exemplo: Crânios egípcios</span></span>
+      <a href="./tarefa_1_multi.html" class="pagination-link" aria-label="Tarefa 1 - Exemplo: Crânios egípcios">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tarefa 1 - Exemplo: Crânios egípcios</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./tarefa3_AF.html" class="pagination-link" aria-label="Tarefa 3 - Análise Fatorial">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tarefa 3 - Análise Fatorial</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
