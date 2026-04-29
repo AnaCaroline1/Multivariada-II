@@ -12,13 +12,15 @@ book:
   chapters:
     - index.qmd
     - ACP.qmd
+    - tarefa3_AF.qmd
 format:
   html:
-    theme:  
+    theme:
       light: flatly
       dark: darkly
     toc-title: "Sumário"
     page-layout: full
 
 editor: visual
+
 

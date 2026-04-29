@@ -1,0 +1,233 @@
+# Tarefa 3 - Análise Fatorial
+
+Para demonstrar a aplicação desta técnica, utilizou-se o Exemplo 7.1 (Emprego em países europeus), extraído da obra Métodos Estatísticos Multivariados: uma introdução (MANLY; NAVARRO ALBERTO, 2019).
+
+## Descrição do exemplo 7.1 - Emprego em países europeus
+
+Considere os dados na Tabela 1.5. Eles mostram as porcentagens da força de trabalho em nove diferentes tipos de indústrias para 30 países europeus. Neste caso, méto-dos multivariados podem ser úteis para isolar grupos de países com padrões similares de empregos, e, em geral, ajudar a compreender os relacionamentos entre os países. Diferenças entre países que são relacionados a grupos políticos (UE, a União Europeia; AELC, a área europeia de livre comércio; países do leste europeu e outros países) podem ser de particular interesse.
+
+```{r include=FALSE}
+# install.packages("psych")
+# install.packages("GPArotation")  # rotações fatoriais
+#install.packages("corrplot")
+library(corrplot)
+library(psych)
+library(GPArotation)
+
+library(tidyverse)
+
+# dados: dataframe com variáveis numéricas
+
+# KMO
+#KMO(dados)
+
+# Bartlett
+#cortest.bartlett(dados)
+
+# Número de fatores
+#fa.parallel(dados)
+
+# Análise fatorial
+#resultado <- fa(dados, nfactors = 3, rotate = "varimax")
+
+#print(resultado)
+
+#calculate_bartlett_sphericity(data)
+
+
+# Scree Plot
+
+#fa.parallel(dados)
+
+
+emprego <- read.csv("Euroemp.csv")
+```
+
+
+```{r echo=T}
+head(emprego)
+
+va_analise <- emprego|>
+  select(-Country,-Group)
+
+head(va_analise)
+```
+
+
+```{r   fig.align='center'}
+
+# Correlação em todas as observações
+
+corelacao <- cor(va_analise)
+
+corelacao
+
+corrplot(corelacao,
+         method = "color",
+         type = "full",
+         tl.col = "black",
+         tl.cex = 0.7,
+         col = colorRampPalette(c("yellow", "lightblue", "darkblue"))(200))
+
+```
+
+## Análise Fatorial Exploratória
+
+Avaliando a fatorabilidade dos dados. Agrupando os dados em fatores, ou variáveis latentes com poder de descrever o objeto de estudo.
+
+Utilizando o $pysch$, aplica-se os testes:
+
+  - Teste de Bartlett;
+  - Teste de Kaiser-Meyer-Olkin
+  
+### Teste de Bartlett
+
+```{r}
+
+test_B <- cortest.bartlett(va_analise)
+
+cat('Teste da Esfericidade de Bartlett:\n',
+          "\n chi² = ", test_B$chisq, "\n",
+          "\n p.value = ", round(test_B$p.value,4))
+```
+
+Como o resulta do p-value = 0, isto indica que no teste de Bartlett os dados podem ser fatorados e a matriz de correlação observada não é a identidade.
+
+
+
+### Teste de Kaiser-Meyer-Olkin
+
+```{r}
+test_kmo <- KMO(va_analise)
+
+# MSAi = kmo_all - por var. 
+# MSA = kmo_model - valor único
+# Image - matriz anti-imagem (corr. parciais)
+# ImCov - matriz de covariância anti-imagem
+
+
+cat('Valores de kmo_all = \n \n', test_kmo$MSAi, "\n \n",
+    'KMO =', test_kmo$MSA) 
+```
+
+### Aplicação para número de fatores = 9
+
+```{r   fig.align='center'}
+#| warning: False
+
+fator_all1 <- principal(va_analise, nfactors = 9, rotate = "varimax")
+
+#fator_all
+#fator_all$loadings # Cargas fatoriais
+#fator_all$values # Autovalores
+#fator_all$communality # Comunalidades
+
+cat("São ", length(fator_all1$values),
+    " autovalores: \n", fator_all1$values, "\n \n")
+
+ev1 <- fator_all1$values
+
+dados_plot1 <- data.frame(
+  fator = 1:length(ev1),
+  autovalor = ev1
+)
+
+ggplot(dados_plot1, aes(x = fator, y = autovalor)) +
+  geom_line(color = "black") +
+  geom_point(size = 2, color = "red") +
+  labs(title = "Scree Plot com 9 fatores, com rotação varimax",
+       x = "n-ésimo autovalor",
+       y = "autovalor") +
+  theme_minimal()
+
+```
+
+
+### Aplicação para número de fatores = 4
+
+```{r   fig.align='center'}
+#| warning: False
+
+fator_4_1 <- principal(va_analise, nfactors = 4, rotate = "varimax")
+
+#fator_all
+#fator_all$loadings # Cargas fatoriais
+#fator_all$values # Autovalores
+#fator_all$communality # Comunalidades
+
+cat("São ", length(fator_4_1$values),
+    " autovalores: \n", fator_4_1$values, "\n \n")
+
+ev4_1 <- fator_4_1$values
+
+dados_plot4_1 <- data.frame(
+  fator = 1:length(ev4_1),
+  autovalor = ev4_1
+)
+
+ggplot(dados_plot4_1, aes(x = fator, y = autovalor)) +
+  geom_line(color = "black") +
+  geom_point(size = 2, color = "red") +
+  labs(title = "Scree Plot com 4 fatores, com rotação varimax",
+       x = "n-ésimo autovalor",
+       y = "autovalor") +
+  theme_minimal()
+
+```
+
+## Cargas fatoriais
+
+A carga fatorial é o coeficiente de correlação entre a variáveis e o fator, mostrando a variância explicativa pela variável naquele fator em particular.
+
+```{r echo=FALSE}
+cargas_fac <- unclass(fator_4_1$loadings) # faz a extração mais limpa da classe loadins, que se composta como uma matriz mas falha em converter em data frame. ,"Fator 4"
+
+
+cargas_fac <- as.matrix(cargas_fac)
+
+colnames(cargas_fac) <- c("Fator 1", "Fator 2","Fator 3","Fator 4")
+
+
+cat("Cargas fatoriais: \n \n") 
+
+cargas_fac
+```
+
+
+```{r   fig.align='center'}
+par(mar = c(5, 4, 4, 2))
+corrplot(cargas_fac,
+         method = "color",
+         type = "full",
+         tl.col = "black",
+         tl.cex = 0.7,
+         cl.pos = "r",
+         cl.ratio = 0.2,
+         col = colorRampPalette(c("yellow", "lightblue", "darkblue"))(300))
+
+```
+
+## Comunalidades
+
+```{r}
+comunalidades <- fator_4_1$communality
+```
+
+
+```{r echo=FALSE}
+cat("Comunalidade total: ", sum(comunalidades), "\n \n", "Comunalidades: \n \n")
+
+comunalidades
+
+
+```
+
+A média das comunalidades é a proporção da variavibilidade dos dados padronizados explicados pelo conjunto de fatores.
+
+```{r}
+var_ratio = sum(comunalidades)/length(comunalidades)
+
+
+cat("Média das comunalidades: ", var_ratio, "\n")
+
+```
